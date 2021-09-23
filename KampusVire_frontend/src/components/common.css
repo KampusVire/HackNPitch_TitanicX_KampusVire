@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Quentin';
+    src: local("Quentin") , url("https://giantsmeet.s3.ap-south-1.amazonaws.com/16323932660204c2bd104ebb64be520e02bc0b42b46cc.otf") format("opentype");
+}
+/* For Text Font */
+.nunito_sans{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.open_sans{
+    font-family: 'Open Sans', sans-serif;
+}
+.rubik{
+    font-family: 'Rubik', sans-serif;
+}
+.quentin{
+    font-family: 'Quentin';
+}
+/* For Bacground Color */
+.bg-green{
+    background-color: #00A310 !important;
+}
+/* For Text Color */
+.txt-green{
+    color: #00A310 !important;;
+}

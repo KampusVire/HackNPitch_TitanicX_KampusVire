@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+        <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <title>Kampus Vire</title>
+    <style type="text/css">
+      .loaderBox{padding:0 11rem}.loaderHeading{margin-top:12rem;font-size:2.5rem}.loaderIcon{margin-bottom:10rem;padding:1.5rem 0 1.5rem 4rem;background-color:#f5f5f5}.boxes{height:32px;width:32px;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform-origin:50% 50%;transform-origin:50% 50%;margin-top:32px;-webkit-transform:rotateX(60deg) rotateZ(45deg) rotateY(0) translateZ(0);transform:rotateX(60deg) rotateZ(45deg) rotateY(0) translateZ(0)}.boxes .box{width:32px;height:32px;top:0;left:0;position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.boxes .box:nth-child(1){-webkit-transform:translate(100%,0);transform:translate(100%,0);-webkit-animation:box1 1s linear infinite;animation:box1 1s linear infinite}.boxes .box:nth-child(2){-webkit-transform:translate(0,100%);transform:translate(0,100%);-webkit-animation:box2 1s linear infinite;animation:box2 1s linear infinite}.boxes .box:nth-child(3){-webkit-transform:translate(100%,100%);transform:translate(100%,100%);-webkit-animation:box3 1s linear infinite;animation:box3 1s linear infinite}.boxes .box:nth-child(4){-webkit-transform:translate(200%,0);transform:translate(200%,0);-webkit-animation:box4 1s linear infinite;animation:box4 1s linear infinite}.boxes .box>div{background:#00f118;--translateZ:15.5px;--rotateY:0deg;--rotateX:0deg;position:absolute;width:100%;height:100%;background:#00f118;top:auto;right:auto;bottom:auto;left:auto;-webkit-transform:rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));transform:rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ))}.boxes .box>div:nth-child(1){top:0;left:0;background:#00f118}.boxes .box>div:nth-child(2){background:#00a310;right:0;--rotateY:90deg}.boxes .box>div:nth-child(3){background:#01c314;--rotateX:-90deg}.boxes .box>div:nth-child(4){background:#dbe3f4;top:0;left:0;--translateZ:-90px}@keyframes box1{0%,50%{transform:translate(100%,0)}100%{transform:translate(200%,0)}}@keyframes box2{0%{transform:translate(0,100%)}50%{transform:translate(0,0)}100%{transform:translate(100%,0)}}@keyframes box3{0%,50%{transform:translate(100%,100%)}100%{transform:translate(0,100%)}}@keyframes box4{0%{transform:translate(200%,0)}50%{transform:translate(200%,100%)}100%{transform:translate(100%,100%)}}
+  </style>
+  </head>
+  <body>
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="preloader" style="height: 100vh;overflow: hidden;justify-content: center; display: flex;flex-direction:column;"> <div class="container position-relative loaderBox"> <div class="boxes"> <div class="box"> <div></div><div></div><div></div><div></div></div><div class="box"> <div></div><div></div><div></div><div></div></div><div class="box"> <div></div><div></div><div></div><div></div></div><div class="box"> <div></div><div></div><div></div><div></div></div></div></div><h1 class="text-center fw-bold" style=" margin-top: 12rem;font-size: 2.5rem;"> Loading </h1> <p class="text-muted text-center fs-6">Please be Patient</p></div>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      window.onload = function(){
+          document.getElementById("preloader").style.display="none"
+      }
+  </script>
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <!-- TODO add these links into one -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:wght@400;700&family=Open+Sans:wght@400;600&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  
+      <!-- FontAwesom kit -->
+      <script src="https://kit.fontawesome.com/92b21ed5b0.js" crossorigin="anonymous"></script>
+      
+      <!-- External StyleSheet  -->
+      <link rel="stylesheet" href="/common.css" >
+      <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="/navMenu.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- <script src="../src/components/sideBar.js"></script> -->
+
+  </body>
+</html>

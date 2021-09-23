@@ -1,0 +1,33 @@
+/* For Qr code */
+.QrImg{
+    height: 16rem;
+    width: 16rem;
+    margin: auto;
+}
+/* For Qr code  at modal*/
+.QrImgModal{
+    height: 20rem;
+    display: flex;
+    width: 20rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.iconHover{
+    background-color: whitesmoke;
+    transition: all .4s ease;
+}
+
+.iconHover:hover{
+    background-color: #008000;
+}
+
+.iconHover:hover i{
+    color: white!important;
+}
+
+.iconHover:hover img{
+    filter: invert(100%);
+}

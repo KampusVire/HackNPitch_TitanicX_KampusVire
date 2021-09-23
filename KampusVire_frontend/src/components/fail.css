@@ -1,0 +1,135 @@
+
+
+
+#balloon {
+    /* width: 400px; */
+    display:block;
+    height: 400px;
+    margin-top: 50rem;
+    margin:0 auto;
+  }
+  
+  .failballoon {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to top, #fe4a2b, #ff416d);
+    border-radius: 50%;
+    border: 4px solid #fe4a2b;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);
+    animation: moving-balloon 3s ease infinite;
+    
+}
+
+.failbasket::after {
+      content: "";
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translate(-50%);
+      border-top: 60px solid #fe4a2b;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        height: 0;
+        width: 70px;
+    }
+    
+.failbasket::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 150px;
+      transform: translate(-50%);
+      width: 70px;
+      height: 25px;
+      background-color: #E86B5A;
+      border-radius: 5px;
+    }
+  
+  .failbasket {
+    width: 42px;
+    height: 28px;
+    background: #D1C1A6;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 270px;
+    animation: moving-basket 3s ease infinite;
+    
+}
+.failbasket:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 10px;
+      background: #B2A082;
+      border-radius: 3px;
+      top: -10px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  
+.failbasket:after {
+      content: "";
+      width: 25px;
+      height: 35px;
+      position: absolute;
+      top: -78px;
+      left: 50%;
+      transform: translate(-50%) perspective(50px) rotateX(-40deg);
+      border-left: 2px solid #B2A082;
+      border-right: 2px solid #B2A082;
+    }
+  
+  .cloud {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 140px;
+    height: 30px;
+    background: #f4f8fc;
+    border-radius:50px;
+    animation: moving-cloud 3s ease infinite;
+    
+}
+ .cloud::before{
+      content:"";
+      position: absolute;
+      top: -40px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background: #f4f8fc;
+      border-radius: 50%;
+    }
+    
+.cloud::after{
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      background: #f4f8fc;
+      border-radius: 50%;
+    }
+  
+  
+  @keyframes moving-balloon {
+      0% 	 {transform:  translate(-50%)}
+      50% {transform: translate(-50%, -10%)}
+  }
+  
+  @keyframes moving-basket {
+      0% 	 {transform:  translate(-50%)}
+      50% {transform: translate(-50%, -40%)}
+  }
+  
+  @keyframes moving-cloud {
+      0% 	 {transform:  translateX(0)}
+      50% {transform: translateX(-7%)}
+  }
+  

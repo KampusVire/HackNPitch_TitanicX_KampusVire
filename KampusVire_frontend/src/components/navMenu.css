@@ -1,0 +1,152 @@
+/* Check Box */
+
+.toggler {
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  left: 1rem;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Hamburger */
+
+.hamburger {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6em;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  /* background-color: whitesmoke; */
+  /* border-radius: 0.4rem; */
+  /* box-shadow: 1px 1px 3px whitesmoke; */
+}
+
+/* For Middle line */
+
+.hamburger > div {
+  height: 0.25rem;
+  background-color: white;
+  width: 100%;
+  /* border-radius: 22rem; */
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* For Top and bottom Lines */
+
+.hamburger > div::before,
+.hamburger > div::after {
+  position: absolute;
+  top: -0.6rem;
+  content: "";
+  background-color: inherit;
+  width: 100%;
+  height: 0.25rem;
+  /* border-radius: 22rem; */
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+  top: 0.6rem;
+}
+
+/* Annimate the lines */
+
+.toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.toggler:checked + .hamburger > div::before,
+.toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Side Nav Bar */
+
+.sidebar ul{
+  list-style: none;
+  padding: 0;
+  
+  /* background-color: white; */
+}
+
+.sidebar {
+  position: fixed;
+  height: 95vh;
+  width: 20rem;
+  z-index: 7;
+  background-color: white;
+  top: 3.3rem;
+  color: whitesmoke;
+  overflow: hidden;
+  overflow-y: scroll;
+  transition: all 0.5s ease;
+  border-top: 1px solid #008000;
+  box-shadow: inset -1px 0px 1px gray;
+}
+
+.sidebar.hide{
+left: -20rem;
+}
+.sidebar.show{
+  left: 0;
+}
+
+/* For SideBar Image */
+/* .profileInfo{
+
+  border-bottom: 1px solid whitesmoke;
+} */
+.profilePic{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
+    
+}
+  
+/* List Items */
+
+.sidebar a li {
+  line-height: 4rem;
+  padding-left: 2rem;
+  border-top: 1px solid rgba(225, 225, 225, 0.1);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.6);
+  transition: all 0.5s ease;
+  text-decoration: none!important;
+}
+
+.sidebar a li:last-child {
+  border-bottom: none;
+}
+
+/* list Animations */
+
+.sidebar a li:hover {
+  padding-left: 4rem;
+  background-color: whitesmoke;
+}
+
+/* .sidebar a li:hover {
+  color: #008000;
+}
+
+.sidebar li a {
+color: black;
+text-decoration: none;
+font-size: 1.2rem;
+font-family: 'Open Sans', sans-serif;
+} */

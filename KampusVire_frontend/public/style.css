@@ -1,0 +1,36 @@
+
+/* Heading Hacathon in  singup Page */
+.header{
+    margin-bottom: 8.5rem;
+    margin-top: 6rem;
+    font-size: 3rem;
+    font-family: 'Quentin';
+
+}
+
+/* Button to float bottom */
+/* .button{
+    position: absolute;
+    bottom: 1rem;
+} */
+
+.button .btn{
+    padding: .5rem ;
+}
+
+/* Button to float bottom for qrpay page*/
+.button2{
+    position: absolute;
+    bottom: 3rem;
+}
+
+.button2 .btn{
+    padding: .5rem ;
+}
+
+
+@media only screen and (max-height : 580px){
+    .header{
+        margin: 5rem 0;
+    }
+}
