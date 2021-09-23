@@ -1,0 +1,6 @@
+Django==3.2.6
+django-cors-headers==3.8.0
+fake-useragent==0.1.11
+graphene-django
+django-filter
+razorpay
