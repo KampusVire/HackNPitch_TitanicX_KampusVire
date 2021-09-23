@@ -6,6 +6,8 @@
 
 #### Project is live in [https://main.d36sj5p5rveg32.amplifyapp.com/](https://main.d36sj5p5rveg32.amplifyapp.com/)
 
+> 🔴 🟠 🟡 The crypto transaction may take more than 5sec to execute successfully. Please don't leave the page. Wait for confirmation. 
+
 
 ##### Steps to use KampusVire
 1.  Open [https://main.d36sj5p5rveg32.amplifyapp.com/](https://main.d36sj5p5rveg32.amplifyapp.com/)
@@ -40,8 +42,6 @@
 8. Now in the new page click on **Success**
 9. You will be redirected to confirmation page
 
-
-
 #### Tech Stack
 - ReactJS
 - Django
@@ -50,7 +50,28 @@
 - Python
 - Nodejs
 
+##### Backend Installation
+1. Go to **KampusVire_backend**
+2. Create python virtualenv
+3. Activate virtual enviroment
+4. Run **pip install -r requirements.txt**
+5. Go to kampusvire/settings.py . At the bottom in Line 140 , replace RAZORPAY_KEY and RAZORPAY_SECRET with your own Razorpay API details
+6. Run **python manage.py makemigrations**
+7. Run **python manage.py migrate**
+8. Run **python manage.py runserver**
 
+It will by default will run at **http://localhost:8000/**
+
+#### Frontend Installation
+1. Go to **KampusVire_frontend**
+2. Run **npm install**
+3. In **config.js**, replace **ENDPOINT** with **http://localhost:8000**
+4. Run **npm start**
+5. Visit **http://localhost:3000/**
+
+> Note that, as we are running localserver on http server , so it maybe happen that the QR scan will not work due to security policy in browser 
+> For information regarding this , visit this blog post from mozilla.org [https://blog.mozilla.org/webrtc/camera-microphone-require-https-in-firefox-68/](https://blog.mozilla.org/webrtc/camera-microphone-require-https-in-firefox-68/)
+> This same is applied for Google chrome browser
 
 
 
