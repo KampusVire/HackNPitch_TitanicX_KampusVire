@@ -83,7 +83,7 @@ const AllProducts = (props) => {
 
   return (
     <>
-    <Link to="/cart" style={{"position":"fixed","width":"60px","height":"60px","bottom":"23px","right":"23px","backgroundColor":"#FFF","color":"#FFF","borderRadius":"50px","textAlign":"center","boxShadow":"2px 2px 3px #999", display:"flex", justifyContent : "center", alignItems : "center"}}><i class="fas fa-shopping-cart fa-2x" style={{"margin":"22px","color":"#00A310"}} ></i></Link>
+    <Link to="/cart" style={{"position":"fixed","width":"60px","height":"60px","bottom":"23px","right":"23px","backgroundColor":"#FFF","color":"#FFF","borderRadius":"50px","textAlign":"center","boxShadow":"2px 2px 3px #999", display:"flex", justifyContent : "center", alignItems : "center", zIndex : 10}}><i class="fas fa-shopping-cart fa-2x" style={{"margin":"22px","color":"#00A310"}} ></i></Link>
       <div
         className="container-fluid sticky-top p-0 m-0 mb-4 w-100"
         style={{ height: "162px" }}

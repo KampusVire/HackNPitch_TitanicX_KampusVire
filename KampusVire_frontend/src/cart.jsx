@@ -66,7 +66,8 @@ const Cart = ()=>{
 
     const removeProduct = (index)=>{
         removeFromCart(products[index].shopObjId,products[index].objId); 
-        setProducts(products.filter(e => e.objId != products[index].objId));
+        var tmp = products.filter(e => e.objId != products[index].objId)
+        setProducts([...tmp]);
         calulateTotal();
     }
 

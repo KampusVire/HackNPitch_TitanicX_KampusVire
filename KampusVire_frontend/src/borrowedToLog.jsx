@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import toast, { Toaster } from 'react-hot-toast';
-import notfoundimage from "./components/img/notfound.webp";
 
 const BorrowedToLog = () => {
   const [log, setLog] = useState([]);
@@ -125,7 +124,7 @@ const BorrowedToLog = () => {
           Borrowed To
         </h1>
         <div className="container mt-3">
-          {log.length == 0 ? <><img src={notfoundimage} width="100%" className="px-1 mt-5"/><h2 className="txt-green w-100 text-center">No Transaction Yet</h2></> :  log.map((snbrw) => {
+          {log.length == 0 ? <><img src="https://giantsmeet.s3.ap-south-1.amazonaws.com/1632408733720e849be0c2809ab71bf24a192ddea07a6.png" width="100%" className="px-1 mt-5"/><h2 className="txt-green w-100 text-center">No Transaction Yet</h2></> :  log.map((snbrw) => {
             return (
               <>
               <div className="p-3 border rounded bg-light my-2" key={snbrw["node"]["objId"]}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GRAPHQL_ENDPOINT } from './config';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -11,11 +11,9 @@ import Card from './components/Card';
 
 const AllShops = () => {
   const [shops, setShops] = useState([]);
-  const [loaded, setLoaded] = useState(false);
   const token = localStorage.getItem('token');
 
-
-  if (!loaded) {
+  useEffect(()=>{
     var data = JSON.stringify({
       query: `query{
             allShops{
@@ -46,17 +44,15 @@ const AllShops = () => {
 
     axios(config)
       .then(function (response) {
-        setLoaded(true);
-        response.data.data.allShops.edges.forEach(shop => {
-          console.log(shop.node);
-          setShops([...shops, shop.node]);
-        })
+        setShops(response.data.data.allShops.edges);
+        
       })
       .catch(function (error) {
         console.log(error);
       });
-  }
+  },[])
 
+ 
 
 
   return (
@@ -68,7 +64,7 @@ const AllShops = () => {
 
         <div className="d-flex flex-wrap justify-content-around">
           
-        {shops.map(shop =>  <Card shopName={shop.name} shopID={shop.objId} picture={shop.picture} />)}
+        {shops.map(shop =>  <Card shopName={shop.node.name} shopID={shop.node.objId} picture={shop.node.picture} />)}
 
         {/* {shops.map(shop => {
           return <div key={shop.objId}>
